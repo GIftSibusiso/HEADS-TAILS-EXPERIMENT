@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data\experiment_outcome.csv")
 
 df_average = df[df["Trials"] == "Average"]
 df = df[df["Trials"] != "Average"]

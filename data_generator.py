@@ -6,11 +6,11 @@ heads_tails = ["heads", "tails"]
 
 def add_data(heads_outcome, tails_outcome, count):
 
-    with open("data.csv", "a") as data_file:
+    with open("data\experiment_outcome.csv", "a") as data_file:
         data_file.write(f"{count},{heads_outcome},{tails_outcome}\n")
 
 
-with open("data.csv", "w") as f:
+with open("data\experiment_outcome.csv", "w") as f:
     f.write(f"Trials,Heads,Tails\n")
 
 
@@ -26,9 +26,9 @@ for i in range(1, 5):
             tails += 1
     
     add_data(heads, tails, i)
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data\experiment_outcome.csv")
 
-with open("data.csv", "a") as data_file:
+with open("data\experiment_outcome.csv", "a") as data_file:
     data_file.write(f"Average,{(df['Heads'].sum() / 400) * 100},{(df['Tails'].sum() / 400) * 100}\n")
 
 
