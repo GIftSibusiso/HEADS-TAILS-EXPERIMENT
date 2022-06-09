@@ -1,3 +1,3 @@
-# Heads and tails experiment
+# Coin experiment
 
 Relative frequency explained
